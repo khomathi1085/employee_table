@@ -1,0 +1,132 @@
+/* General styling for the entire page */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+    background-color: #e3f2fd; /* Light Blue background for the page */
+    overflow: hidden; /* Prevent page scroll */
+  }
+  
+  /* Container for the form */
+  .form-container {
+    background-color: #ffffff; /* White background for the form */
+    padding: 40px 60px; /* Generous padding for better spacing */
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    width: 100%;
+    max-width: 650px; /* Max width for the form */
+    max-height: 80vh; /* Allow form container to grow up to 80% of the viewport height */
+    overflow-y: auto; /* Enable vertical scroll if the content exceeds the height */
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+  }
+  
+  .form-container:hover {
+    transform: translateY(-10px); /* Slight upward movement on hover for visual effect */
+  }
+  
+  /* Header text styling */
+  h2 {
+    text-align: center;
+    color: #0277bd; /* Deep Blue color for the header */
+    font-size: 28px;
+    margin-bottom: 25px;
+    font-weight: bold;
+  }
+  
+  /* Form group styling (space between form elements) */
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  /* Label styling */
+  .form-group label {
+    font-weight: 600;
+    color: #333;
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+  }
+  
+  /* Input and select fields styling */
+  .form-control {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #fafafa; /* Slight gray background for inputs */
+    transition: border-color 0.3s ease;
+  }
+  
+  /* Input fields on focus */
+  .form-control:focus {
+    border-color: #0277bd; /* Blue border on focus */
+    outline: none;
+    box-shadow: 0 0 5px rgba(2, 119, 189, 0.5); /* Subtle focus shadow */
+  }
+  
+  /* Error message styling */
+  .error {
+    color: #f44336;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  
+  /* Submit and Reset buttons container */
+  .form-actions {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  /* Styling for the submit button */
+  .submit-btn {
+    padding: 12px 30px;
+    background-color: #0277bd; /* Blue background for submit button */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submit-btn:hover {
+    background-color: #01579b; /* Darker blue on hover */
+  }
+  
+  /* Styling for the reset button */
+  .reset-btn {
+    padding: 12px 30px;
+    background-color: #ff7043; /* Soft orange background for reset button */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .reset-btn:hover {
+    background-color: #d84b26; /* Darker orange on hover */
+  }
+  
+  /* Toast message styling for success and error messages */
+  .Toastify__toast {
+    font-size: 14px;
+    background-color: #4caf50 !important; /* Green background for success */
+  }
+  
+  .Toastify__toast--error {
+    background-color: #f44336 !important; /* Red background for error */
+  }
+  
+  /* Toast container styling */
+  .Toastify__toast-container {
+    top: 10px;
+    right: 10px;
+  }
+  
