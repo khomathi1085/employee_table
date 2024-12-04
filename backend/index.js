@@ -7,7 +7,13 @@ import dotenv from "dotenv";
 dotenv.config();
 
 const app = express();
-app.use(cors());
+const corsOptions = {
+    origin: "https://employee-table-task.netlify.app/", // Replace with your frontend's URL
+    methods: ["GET", "POST"],
+    allowedHeaders: ["Content-Type"],
+  };
+  
+app.use(cors(corsOptions));  
 app.use(bodyParser.json());
 
 // Ensure there are no spaces after the variable names
@@ -48,4 +54,6 @@ app.post("/add-employee", (req, res) => {
   });
 });
 
-app.listen(5000, () => console.log("Server running on http://localhost:5000"));
+const port = process.env.PORT || 5000;
+app.listen(port, () => console.log(`Server running on port ${port}`));
+
