@@ -10,7 +10,9 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
-const urlDB = `mysql://${process.env.MYSQLUSER }:${process.env.MYSQLPASSWORD}@${process.env.MYSQLHOST}:${process.env.MYSQLPORT}/${process.env.MYSQLDATABASE}`
+// Ensure there are no spaces after the variable names
+const urlDB = `mysql://${process.env.MYSQLUSER}:${process.env.MYSQLPASSWORD}@${process.env.MYSQLHOST}:${process.env.MYSQLPORT}/${process.env.MYSQLDATABASE}`;
+
 const db = mysql.createConnection(urlDB);
 
 db.connect((err) => {
@@ -20,6 +22,7 @@ db.connect((err) => {
   }
   console.log("Connected to database");
 });
+
 app.post("/add-employee", (req, res) => {
   const { name, employeeId, email, phone, department, dateOfJoining, role } = req.body;
 
@@ -44,4 +47,5 @@ app.post("/add-employee", (req, res) => {
       });
   });
 });
+
 app.listen(5000, () => console.log("Server running on http://localhost:5000"));
